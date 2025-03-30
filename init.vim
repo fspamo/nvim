@@ -1,4 +1,3 @@
- "Plugins
 
 call plug#begin()
 
@@ -24,7 +23,6 @@ Plug 'alvan/vim-closetag'
 
 call plug#end()
 
-" General Configuration
 
 set number
 set relativenumber
@@ -38,16 +36,9 @@ set encoding=UTF-8
 set visualbell
 set scrolloff=5
 
-" :colorscheme base16-onedark
 :colorscheme onedark
 let g:airline_theme='onedark'
 
-" :colorscheme gruvbox
-" let g:airline_theme='gruvbox'
-
-" lua require('test')
-
-" NERDTree Configuration
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
@@ -58,7 +49,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :UndotreeToggle<CR>
 nnoremap <Space>s :w<CR>
 
-" VIM AIRLINE CONFIGURATION
 
 let g:airline_powerline_fonts = 1
 
@@ -79,17 +69,15 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" Tagbar
 
 nmap <F6> :TagbarToggle<CR>
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-" Note -> Use CocList diagnostics to get all linter errors, Note -> .vim
-" folder is created for every project where linter is specified
 
 nnoremap <F3> :noh<CR>
-
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 
 let g:floaterm_keymap_new    = '<F7>'
@@ -103,7 +91,6 @@ let g:coc_disable_startup_warning = 1
 
 let g:python_highlight_all = 1
 
-" au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
