@@ -110,3 +110,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
 :imap <3-MiddleMouse> <Nop>
 :map <4-MiddleMouse> <Nop>
 :imap <4-MiddleMouse> <Nop>
+
+
+" Make background transparent
+autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi LineNr guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
