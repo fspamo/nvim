@@ -11,6 +11,7 @@ Plug 'https://github.com/junegunn/fzf.vim' " Fuzzy Finder, Needs Silversearcher-
 Plug 'https://github.com/junegunn/fzf'
 Plug 'https://github.com/navarasu/onedark.nvim'
 Plug 'https://github.com/morhetz/gruvbox'
+Plug 'blazkowolf/gruber-darker.nvim'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -36,7 +37,8 @@ set encoding=UTF-8
 set visualbell
 set scrolloff=5
 
-:colorscheme onedark
+" :colorscheme onedark
+:colorscheme gruber-darker 
 let g:airline_theme='onedark'
 
 
