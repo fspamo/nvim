@@ -58,6 +58,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :UndotreeToggle<CR>
 nnoremap <Space>s :w<CR>
+nnoremap <space>f mzggVG=`z
 
 
 let g:airline_powerline_fonts = 1
