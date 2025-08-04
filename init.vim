@@ -36,6 +36,7 @@ set smarttab
 set encoding=UTF-8
 set visualbell
 set scrolloff=5
+set noswapfile
 
 " :colorscheme onedark
 :colorscheme gruber-darker
