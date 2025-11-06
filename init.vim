@@ -24,7 +24,6 @@ Plug 'alvan/vim-closetag'
 
 call plug#end()
 
-
 set number
 set relativenumber
 set mouse=a
