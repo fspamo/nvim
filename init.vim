@@ -114,6 +114,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
 :map <4-MiddleMouse> <Nop>
 :imap <4-MiddleMouse> <Nop>
 
+let g:user42 = 'cbozkurt'
+let g:mail42 = 'cbozkurt@student.42kocaeli.com.tr'
 
 " " Make background transparent
 " autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
