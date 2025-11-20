@@ -25,4 +25,4 @@ git clone https://github.com/fspamo/nvim ~/.config/nvim
 nvim
 ```
 
-**NOTE:** Couple optional keybinds are assigned to different key combinations. (Such as Space+S to save the file and Space+F to format) 
+**NOTE:** Couple optional shortcuts are assigned to different key combinations. (Such as Space+S to save the file and Space+F to format) 
