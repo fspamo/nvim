@@ -1,3 +1,28 @@
-# nvim
- A lightweight Neovim config that I use on my weaker devices. 
- Pretty much all you need.
+# A ligthweight Neovim rice that does pretty much all you need.
+
+**NOTE:** NPM and [Nerdfont](https://www.nerdfonts.com/) is required.
+
+## 🛠️ Installation
+
+#### Make a backup of your current nvim and shared folder
+
+```shell
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+```
+
+#### Clone the repository
+
+```shell
+git clone https://github.com/fspamo/nvim ~/.config/nvim
+```
+
+#### Start Neovim
+
+```shell
+nvim
+```
+
+**NOTE:** Couple optional shortcuts are assigned to different key combinations. (Such as Space+s to save the file and Space+f to format) 
