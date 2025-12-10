@@ -57,7 +57,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :UndotreeToggle<CR>
 nnoremap <Space>s :w<CR>
-nnoremap <space>f mzggVG=`z
+nnoremap <space>f mzggVG=`zzz
 
 
 let g:airline_powerline_fonts = 1
@@ -118,8 +118,8 @@ let g:user42 = 'cbozkurt'
 let g:mail42 = 'cbozkurt@student.42kocaeli.com.tr'
 
 " " Make background transparent
-" autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
-" autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
-" autocmd VimEnter * hi LineNr guibg=NONE ctermbg=NONE
-" autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
-" autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi LineNr guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
