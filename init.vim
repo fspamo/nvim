@@ -1,4 +1,3 @@
-
 call plug#begin()
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -37,6 +36,11 @@ set visualbell
 set scrolloff=5
 set noswapfile
 
+" CoC için gerekli ayarlar
+set hidden
+set updatetime=300
+set signcolumn=yes
+
 " :colorscheme onedark
 :colorscheme gruber-darker
 let g:airline_theme='onedark'
@@ -71,18 +75,49 @@ let g:bullets_enabled_file_types = [
     \ 'text'
     \]
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 
 nmap <F6> :TagbarToggle<CR>
 
+" CoC Keybindings - Autocompletion
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <silent><expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+" CoC - Hatalara git
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" CoC - Tanıma git (Go to definition)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" CoC - Sembol yeniden adlandır
+nmap <leader>rn <Plug>(coc-rename)
+
+" CoC - Hover ile dokümantasyon göster
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" CoC - Code actions
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 
 nnoremap <F3> :noh<CR>
@@ -101,9 +136,6 @@ let g:coc_disable_startup_warning = 1
 
 let g:python_highlight_all = 1
 
-
-inoremap <expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
 
 :map <MiddleMouse> <Nop>
 :imap <MiddleMouse> <Nop>
