@@ -24,5 +24,23 @@ git clone https://github.com/fspamo/nvim ~/.config/nvim
 ```shell
 nvim
 ```
+#### Auto-completion setup
+
+Install all the plugins using 
+```
+:PlugInstall
+```
+
+#### Auto-completion setup
+
+```Python
+sudo apt install flake8 black
+```
+```C
+sudo apt install flake8 black
+```
+```Then inside Neovim
+:CocInstall coc-clangd coc-pyright
+```
 
 **NOTE:** Couple optional shortcuts are assigned to different key combinations. (Such as Space+s to save the file and Space+f to format) 
