@@ -32,13 +32,16 @@ Install all the plugins using
 ```
 
 #### Auto-completion setup
-
+For Python:
 ```Python
 sudo apt install flake8 black
 ```
+For C:
 ```C
 sudo apt install clangd
 ```
+#### Inside Neovim
+
 ```Then inside Neovim
 :CocInstall coc-clangd coc-pyright
 ```
