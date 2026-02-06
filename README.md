@@ -37,7 +37,7 @@ Install all the plugins using
 sudo apt install flake8 black
 ```
 ```C
-sudo apt install flake8 black
+sudo apt install clangd
 ```
 ```Then inside Neovim
 :CocInstall coc-clangd coc-pyright
